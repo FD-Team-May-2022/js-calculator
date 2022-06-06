@@ -1,0 +1,112 @@
+#calculator {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin:0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#display {
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: xx-large;
+    padding: 20px;
+    margin:10px;
+    text-align: right;
+    color: grey;
+    background-color: rgb(235, 235, 235);
+    height: 35px;
+}
+
+.digit, .key, .operator {
+    font-size: xx-large;
+    padding: 20px;
+    margin:10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+.digit:hover {
+    background-color: rgba(0, 0, 255, 0.281);
+    cursor:pointer;
+}
+
+.operator:hover {
+    background-color:rgba(255, 217, 0, 0.288);
+    cursor:pointer;
+}
+
+#equals:hover {
+    background-color:rgba(0, 128, 0, 0.247);
+    cursor:pointer;
+}
+
+#clear:hover {
+    background-color:rgba(255, 0, 0, 0.233);
+    cursor:pointer;
+}
+
+#clear {
+    font-size: 1em;
+    margin: auto;
+    line-height: 35px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.digit {
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+#point {
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: xx-large;
+    padding: 20px;
+    margin:10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+#point:hover {
+    background-color: rgba(0, 0, 255, 0.281);
+    cursor:pointer;
+}
+
+.operator {
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+#equals {
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 134px;
+}
+
+#lastRow {
+    justify-content: flex-start;
+}
+
+#negative {
+    font-size: x-large;
+    padding: 20px;
+    margin:10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+#negative:hover {
+    background-color:rgba(255, 217, 0, 0.288);
+    cursor:pointer;
+}
