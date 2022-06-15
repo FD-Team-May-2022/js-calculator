@@ -50,18 +50,21 @@ const btnDigits = document.querySelectorAll('div.digit');
 btnDigits.forEach(digit => {
     digit.addEventListener('click', () => {
         console.log("Click on " + digit.textContent);
-        
-        if (operator != null && a != null && b == null) {
-            display.textContent = "";
-            point = false;
-            b = "writing";
+        if (digit.textContent == "0" && display.textContent == "0") {
+            console.log("Only one zero"); 
+        } else {
+            if (operator != null && a != null && b == null) {
+                display.textContent = "";
+                point = false;
+                b = "writing";
+            }
+
+            // console.log("   a : $" + a + "$");
+            // console.log("   b : $" + b + "$");
+            // console.log("   operator : $" + operator + "$");
+
+            display.textContent += digit.textContent;
         }
-
-        // console.log("   a : $" + a + "$");
-        // console.log("   b : $" + b + "$");
-        // console.log("   operator : $" + operator + "$");
-
-        display.textContent += digit.textContent;
     })
 
 });
@@ -97,8 +100,10 @@ function equals(operator, a) {
     a = res;
     b = null;
     operator = null;
+
+    let resRounded = res.toFixed(7);
     
-    display.textContent = res;
+    display.textContent = resRounded;
     return res;
 }
 
@@ -110,6 +115,14 @@ btnClear.addEventListener('click', () => {
     operator = null;
     display.textContent = "";
     point=false;
+})
+
+const btnDelete = document.querySelector('div#delete');
+btnDelete.addEventListener('click', () => {
+    console.log("Click on delete");
+    let dis = display.textContent.split("");
+    dis.pop();
+    display.textContent= dis.join("");
 })
 
 const btnNegative = document.querySelector('div#negative');
